@@ -8,8 +8,14 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+            defer
+            src="https://code.iconify.design/1/1.0.7/iconify.min.js"
+    ></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
@@ -73,6 +79,12 @@
                 <span class="links_name">Back Home</span>
             </a>
         </li>
+        <li>
+            <a id="profile-btn" href="#">
+                <i class='bx bxs-user'></i>
+                <span class="links_name">Profile</span>
+            </a>
+        </li>
     </ul>
 </div>
 <section class="home-section">
@@ -89,10 +101,63 @@
 
     <div class="Courses">
 
-        <div class="Noti">
-            <div class="data ">
+        <div class="panel-main">
+            <div class="profile-panel">
+                <div class="left-div">
+                    <div class="profile-pic-div">
+                        <img src="yahia.jpg" class="rounded-img" id="profile-img">
+                        <label>
+                        <input id="img-input" type="file" style="display: none"><span class="iconify" data-icon="bi:camera-fill" style="width: 30px; cursor: pointer "></span>
+                        </label>
+                    </div>
+                    <form>
+                    <div class="info-col" style="padding-left: 10px; padding-right: 10px">
+                        <label style="padding-left: 10px">Old password</label>
+                        <input type="number" class="profile-inputs">
+                    </div>
+                    <div class="info-col" style="padding: 10px 10px">
+                        <label style="padding-left: 10px">New password</label>
+                        <input type="number" class="profile-inputs">
+                    </div>
+                        <input type="submit" value="Change Password" >
+                    </form>
+                </div>
+                <div class="right-div">
+                    <div class="profile-info-div">
+                        <div class="profile-info-title">
+                            <h2>Profile Info</h2>
+                            <span role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit profile</span>
+                        </div>
+                        <form id="profile-form">
+                        <div class="profile-info" style="margin-top: 1rem">
+
+                                <div class="info-col">
+                                    <label>ID</label>
+                                    <input type="number" class="profile-inputs">
+                                </div>
+                                <div class="info-col">
+                                    <label>Name</label>
+                                    <input type="text" class="profile-inputs">
+                                </div>
+                                <div class="info-col">
+                                    <label>Email</label>
+                                    <input type="email" class="profile-inputs">
+                                </div>
+                                <div class="info-col">
+                                    <label>phone</label>
+                                    <input type="number" class="profile-inputs">
+                                </div>
+
+
+                        </div>
+                            <input type="submit" value="Confirm" style="text-align: center">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="data" style="display: none">
                 <div id="order-title" class="title">Recent Orders</div>
-                <div class="da" id="recent">
+                <div class="da" id="recent" style="display: none">
                     <table class="info-tables">
                         <thead>
                         <th>Order No.</th>
@@ -136,6 +201,7 @@
                         <th>Username</th>
                         <th>Email</th>
                         <th>Password</th>
+                        <th>phone</th>
                         </thead>
                         <tbody>
                         <tr>
@@ -143,27 +209,53 @@
                             <td data-label="Username">shawarma</td>
                             <td data-label="Email">kgll2009@hotmail.com</td>
                             <td data-label="Password">123123</td>
+                            <td data-label="phone">0551122123</td>
                         </tr>
                         <tr>
                             <td data-label="UserID">1</td>
                             <td data-label="Username">shawarma</td>
                             <td data-label="Email">kgll2009@hotmail.com</td>
                             <td data-label="Password">123123</td>
+                            <td data-label="phone">0551122123</td>
                         </tr>
                         <tr>
                             <td data-label="UserID">1</td>
                             <td data-label="Username">shawarma</td>
                             <td data-label="Email">kgll2009@hotmail.com</td>
                             <td data-label="Password">123123</td>
+                            <td data-label="phone">0551122123</td>
                         </tr>
                         <tr>
                             <td data-label="UserID">1</td>
                             <td data-label="Username">shawarma</td>
                             <td data-label="Email">kgll2009@hotmail.com</td>
                             <td data-label="Password">123123</td>
+                            <td data-label="phone">0551122123</td>
                         </tr>
                         </tbody>
                     </table>
+                    <h2 class="separator">Add User</h2>
+                    <form class="add-form" id="add-user-form" style="text-align: center">
+                        <table class="info-tables" style="padding-bottom: 10px">
+                            <thead>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Phone</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td data-label="User ID"><input type="number" id="user ID"></td>
+                                <td data-label="Username"><input type="text" id="username"></td>
+                                <td data-label="Email"><input type="email" id="user-email"></td>
+                                <td data-label="Password"><input type="password" id="user-password"></td>
+                                <td data-label="phone"><input type="number" id="phone" pattern="[+970][0-9]{9}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" id="add-user">
+                    </form>
                 </div>
 <!--------------------------------Cars schedule-------------------------------------->
                 <div id="cars" class="da" style="display: none">
@@ -206,6 +298,28 @@
                         </tr>
                         </tbody>
                     </table>
+                    <h2 class="separator">Add Car</h2>
+                    <form class="add-form" id="add-car-form" style="text-align: center">
+                    <table class="info-tables" style="padding-bottom: 10px">
+                        <thead>
+                        <th>Car ID</th>
+                        <th>Manufacturer</th>
+                        <th>type</th>
+                        <th>model</th>
+                        <th>condition</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Car ID"><input type="number" id="Car ID"></td>
+                            <td data-label="Manufacturer"><input type="text" id="manufacturer"></td>
+                            <td data-label="type"><input type="text" id="car-type"></td>
+                            <td data-label="model"><input type="number" id="car model"></td>
+                            <td data-label="condition"><input type="text" id="car-condition"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" id="add-car">
+                    </form>
                 </div>
 
                 <div id="pending" class="da" style="display: none">
@@ -282,7 +396,7 @@
                     </table>
                 </div>
             </div>
-            <div class="Grops">
+            <div class="Grops" style="display: none">
                 <div class="title"> Statistics </div>
                 <div class="container">
                     <div class="calendar">

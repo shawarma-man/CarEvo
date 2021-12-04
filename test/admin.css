@@ -146,28 +146,6 @@ nav .profile-details i{
     position: relative;
     padding-top: 104px;
 }
-.Courses .overview-boxes{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    margin-bottom: 26px;
-}
-.overview-boxes .data{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% / 4 - 15px);
-    background: #fff;
-    padding: 15px 14px;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-.overview-boxes .box-topic{
-    font-size: 20px;
-    font-weight: 500;
-}
 .Courses .data .number{
     display: inline-block;
     font-size: 35px;
@@ -195,42 +173,18 @@ nav .profile-details i{
 .Courses .data .indicator .text{
     font-size: 12px;
 }
-.Courses .data .cart{
-    display: inline-block;
-    font-size: 32px;
-    height: 50px;
-    width: 50px;
-    background: #cce5ff;
-    line-height: 50px;
-    text-align: center;
-    color: #66b0ff;
-    border-radius: 12px;
-    margin: -15px 0 0 6px;
-}
-.Courses .data .cart.two{
-    color: #2BD47D;
-    background: #C0F2D8;
-}
-.Courses .data .cart.three{
-    color: #ffc233;
-    background: #ffe8b3;
-}
-.Courses .data .cart.four{
-    color: #e05260;
-    background: #f7d4d7;
-}
 .Courses .total-order{
     font-size: 20px;
     font-weight: 500;
 }
-.Courses .Noti{
+.Courses .panel-main{
     display: flex;
     justify-content: space-between;
     /* padding: 0 20px; */
 }
 
 /* left box */
-.Courses .Noti .data{
+.Courses .panel-main .data{
     width: 65%;
     background: #fff;
     padding: 20px 30px;
@@ -238,36 +192,37 @@ nav .profile-details i{
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.Courses .Noti .da{
+.Courses .panel-main .da{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
-.Noti .data .title{
+.panel-main .data .title{
     font-size: 24px;
     font-weight: 500;
     /* margin-bottom: 10px; */
 }
-.Noti .da li.topic{
+.panel-main .da li.topic{
     font-size: 18px;
     font-weight: 500;
 }
-.Noti .da li{
+.panel-main .da li{
     list-style: none;
     margin: 8px 0;
 }
-.Noti .da li a{
+.panel-main .da li a{
     font-size: 18px;
     color: #333;
     font-size: 400;
     text-decoration: none;
 }
-.Noti .data .button{
+.panel-main .data .button{
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
-.Noti .data .button a{
+.panel-main .data .button a{
     color: #fff;
     background: #0A2558;
     padding: 4px 12px;
@@ -277,44 +232,11 @@ nav .profile-details i{
     text-decoration: none;
     transition: all 0.3s ease;
 }
-.Noti .data .button a:hover{
+.panel-main .data .button a:hover{
     background:  #0d3073;
 }
 
 /* Right box */
-.Courses .Noti .Grops{
-    width: 35%;
-    background: #fff;
-    padding: 20px 30px;
-    margin: 0 20px 0 0;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.Noti .Grops li{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-}
-.Noti .Grops li a img{
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-right: 10px;
-    background: #333;
-}
-.Noti .Grops li a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-.Noti .Grops li .name,
-.price{
-    font-size: 17px;
-    font-weight: 400;
-    color: #333;
-}
 /* Responsive Media Query */
 @media (max-width: 1240px) {
     .sidebar{
@@ -377,7 +299,132 @@ nav .profile-details i{
     color: black;
     border: 1px solid #4CAF50;
 }
+.separator{
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin: 40px 0;
+}
+td input{
+    max-width: 125px;
+    text-align: center;
+    height: 100%;
+    border: none;
+}
+td input:focus{
+    border: 3px solid #555;
+}
+.add-form input[type="submit"]{
+    background-color: #db2d2e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-out 0s;
 
+}
+.add-form input[type="submit"]:hover{
+    background-color: white;
+    color: red;
+    border: black 1px solid;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.profile-panel{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex:1 0 100%;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.left-div{
+    border-right: 1px solid #dee2e6!important;
+    flex: 0 0 auto;
+    width: 25%;
+    text-align: center;
+}
+.profile-pic-div{
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.rounded-img{
+    border-radius: 50%;
+    margin-top: 3rem;
+    vertical-align: middle;
+    width: 110px;
+    text-align: center;
+}
+.right-div{
+    border-right: 1px solid #dee2e6!important;
+    flex: 0 0 auto;
+    width: 35%;
+}
+.profile-info-div{
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+    padding: 1rem;
+}
+.profile-info-title{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    display: flex;
+}
+profile-info-title h2{
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.info-col{
+    flex: 0 0 auto;
+    width: 100%;
+}
+.profile-inputs{
+    display: block;
+    width: 100%;
+    min-height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+input[type="submit"] {
+    background-color: #db2d2e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-out 0s;
+}
+input[type="submit"]:hover{
+    background-color: white;
+    color: red;
+    border: black 1px solid;
+}
 .container {
 
     width: 100%;

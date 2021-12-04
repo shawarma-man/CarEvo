@@ -1,66 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+            defer
+            src="https://code.iconify.design/1/1.0.7/iconify.min.js"
+    ></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Ford', 8],
+                ['Ferrari', 2],
+                ['Toyota', 2],
+                ['Chevrolet', 2],
+                ['Volkswagen', 2],
+                ['Skoda', 8]
+            ]);
+            let options = {'title':'Cars in inventory', 'width':368, 'height':400};
+
+            let chart = new google.visualization.PieChart(document.querySelector('.calendar'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="Images/test%20profile.jpg"><div class="change" role="button" type="file">
-                <i data-visualcompletion="css-img" class="hu5pjgll lzf7d6o1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/16bZxdXGtDP.png&quot;); background-position: -26px -326px; background-size: 50px 948px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
-            </div><span class="font-weight-bold">Ahmed</span><span class="text-black-50">ahmedmhj.nu@gmail.com</span><span> </span></div>
-            <div class="col-md-12"><label class="labels">Old password</label><input type="password" class="form-control" placeholder="Old password" value=""></div>
-            <div class="col-md-12"><label class="labels">New Password</label><input type="password" class="form-control" placeholder="New password" value=""></div>
-            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Change password</button></div>
+<div class="sidebar">
+    <div class="logo-details" style="background: black">
+        <img src="Carevo%20™.svg" height="140" width="140">
+
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a id="cars-btn" href="#">
+                <i class='bx bxs-car'></i>
+                <span class="links_name">Cars</span>
+            </a>
+        </li>
+
+
+        <li class="log_out">
+            <a href="exam.html">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Back Home</span>
+            </a>
+        </li>
+        <li>
+            <a id="profile-btn" href="#">
+                <i class='bx bxs-user'></i>
+                <span class="links_name">Profile</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">User Dashboard</span>
         </div>
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="profile-details">
+            <img src="test%20profile.jpg">
+            <span class="dashboard">Hello, Ahmed</span>
+        </div>
+    </nav>
 
-                    <h4 class="text-right">Profile Settings</h4>
-                    <span role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit profile</span>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">First name</label><input type="text" class="form-control" placeholder="ahmed" value=""></div>
-                    <div class="col-md-6"><label class="labels">Last name</label><input type="text" class="form-control" value="" placeholder="muhannad"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="number" class="form-control" placeholder="0550881106" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="24th street, narnia avenue" value=""></div>
-                    <!--                    <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>-->
-                    <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="666" value=""></div>
-                    <div class="col-md-12"><label class="labels">City</label><input type="text" class="form-control" placeholder="Nablus" value=""></div>
-                    <!--                    <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>-->
-                    <div class="col-md-12"><label class="labels">Email </label><input type="text" class="form-control" placeholder="ahmedmhj.nu@gmail.com" value=""></div>
-                    <!--                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>-->
+    <div class="Courses">
 
+        <div class="panel-main">
+            <div class="profile-panel">
+                <div class="left-div">
+                    <div class="profile-pic-div">
+                        <img src="yahia.jpg" class="rounded-img" id="profile-img">
+                        <label>
+                            <input id="img-input" type="file" style="display: none"><span class="iconify" data-icon="bi:camera-fill" style="width: 30px; cursor: pointer "></span>
+                        </label>
+                    </div>
+                    <form>
+                        <div class="info-col" style="padding-left: 10px; padding-right: 10px">
+                            <label style="padding-left: 10px">Old password</label>
+                            <input type="number" class="profile-inputs">
+                        </div>
+                        <div class="info-col" style="padding: 10px 10px">
+                            <label style="padding-left: 10px">New password</label>
+                            <input type="number" class="profile-inputs">
+                        </div>
+                        <input type="submit" value="Change Password" >
+                    </form>
                 </div>
-                <!--                <div class="row mt-3">-->
-                <!--                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>-->
-                <!--                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>-->
-                <!--                </div>-->
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="right-div">
+                    <div class="profile-info-div">
+                        <div class="profile-info-title">
+                            <h2>Profile Info</h2>
+                            <span role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit profile</span>
+                        </div>
+                        <form id="profile-form">
+                            <div class="profile-info" style="margin-top: 1rem">
+
+                                <div class="info-col">
+                                    <label>ID</label>
+                                    <input type="number" class="profile-inputs">
+                                </div>
+                                <div class="info-col">
+                                    <label>Name</label>
+                                    <input type="text" class="profile-inputs">
+                                </div>
+                                <div class="info-col">
+                                    <label>Email</label>
+                                    <input type="email" class="profile-inputs">
+                                </div>
+                                <div class="info-col">
+                                    <label>phone</label>
+                                    <input type="number" class="profile-inputs">
+                                </div>
+
+
+                            </div>
+                            <input type="submit" value="Confirm" style="text-align: center">
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>Student info</span><span class="border px-3 p-1 add-experience"><i class="fa fa-share-square-o"></i>&nbsp;Back home</span></div><br>
-                <div class="col-md-12"><label class="labels">Major</label><i class="fa fa-lock"></i><input type="text" class="form-control" disabled value="CE" placeholder="Major" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">University ID</label><i class="fa fa-lock"></i><input type="text" class="form-control" disabled value="11821782"  placeholder="ID" value=""></div>
-                <div id="uni" class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="Images/sdd.png"></div>
+            <div class="data" style="display: none">
+                <div id="order-title" class="title">Recent Orders</div>
+                <div class="da" id="recent" style="display: none">
+                    <table class="info-tables">
+                        <thead>
+                        <th>Order No.</th>
+                        <th>User ID</th>
+                        <th>Car ID</th>
+                        <th>Order Date</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--------------------------------Cars schedule-------------------------------------->
+                <div id="cars" class="da" style="display: none">
+                    <table class="info-tables">
+                        <thead>
+                        <th>Car ID</th>
+                        <th>Manufacturer</th>
+                        <th>type</th>
+                        <th>model</th>
+                        <th>condition</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="Grops" style="display: none">
+                <div class="title"> Statistics </div>
+                <div class="container">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">
+                                <h1></h1>
+                                <p></p>
+                            </div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-<script src="profile.js"></script>
+
+    <script src="profile.js"></script>
+</section>
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+            sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+            sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+</script>
+
 </body>
 </html>

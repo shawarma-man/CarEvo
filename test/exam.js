@@ -15,6 +15,20 @@ document.querySelector("#signup-form .close-btn").addEventListener("click", func
     document.querySelector("#signup-form").classList.remove("active");
 });
 
+
+$("#forgot").bind("click", function (){
+    $("#signin-form").removeClass("active");
+    $("#forgot-form").addClass("active");
+    $(".form h2").text("Password Reset");
+    $("#confirm").bind("click", function (){
+        $(".form h2").text("An email has been sent to you");
+        setTimeout(function() { $("#forgot-form").delay(999999).removeClass("active"); }, 3000)
+    })
+});
+$("#forgot-form .close-btn").bind("click", function (){
+    $("#forgot-form").removeClass("active");
+});
+
 let header = document.getElementById("header_content_1");
 const typed = new Typed(".animate", {
     strings: ["Creativity", "Ambitiousness","CarEvo™"],

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./typed.js-master/lib/typed.min.js">
+    </script>
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One" rel="stylesheet"/>
+    <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+            data-auto-a11y="true"
+    ></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script
+            defer
+            src="https://code.iconify.design/1/1.0.7/iconify.min.js"
+    ></script>
+
+    <script type="text/javascript" src="http://www.carqueryapi.com/js/jquery.min.js"></script>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="products.css" />
+    <title>CarEvo-Store</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<header class="body_header">
+
+    <div id="header_content_1" class="header_content">
+        <nav id="header_nav">
+            <section style="overflow: visible">
+                <div class="menu">
+                    <div class="header_row">
+                        <div class="header_col">
+                            <ul class="logo_list">
+                                <li>
+                                    <img src="Carevo%20™.svg" class="logo">
+                                </li>
+                            </ul>
+                            <ul class="header_links">
+                                <li>
+                                    <a target="_blank" class="header_link" href="" rel="nofollow">Support</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" class="header_link" href="" rel="nofollow">Video Tutorials</a>
+                                </li>
+                                <li>
+                                    <a class="header_link" href="exam.html" rel="nofollow">Home</a>
+                                </li>
+                                <li class="dropdown">
+
+                                    <a class="account_btn dropbtn"  href="" ><img src="person_black_24dp.svg"></a>
+                                    <div class="dropdown-content">
+                                        <a id="sign-in-btn" href="#">Sign in<span class="iconify" data-icon="bytesize:sign-in" style="float: right"></span></a>
+                                        <a id="sign-up-btn" href="#">Sign up<span class="iconify" data-icon="heroicons-solid:pencil-alt" style="float: right"></span></a>
+                                    </div>
+
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </div>
+</header>
+<div id="signin-form" class="popup">
+    <div class="close-btn">&times;</div>
+    <form action="#">
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="Password" placeholder="Enter Password">
+            </div>
+            <div class="form-element">
+                <input type="submit" id="sign in" value="Sign in">
+            </div>
+            <div class="form-element">
+                <input type="button" id="forgot" value="forgot password">
+            </div>
+
+        </div>
+    </form>
+</div>
+<div id="signup-form" class="popup">
+    <div class="close-btn">&times;</div>
+    <form action="#">
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email-signup" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="Password-signup" placeholder="Enter Password">
+            </div>
+            <div class="form-element">
+                <input type="submit" id="signup" value="Sign up">
+            </div>
+
+        </div>
+    </form>
+</div>
+<section class="main_page">
+
+    <div class="main_page_div">
+        <div class="banner">
+            <h1 class="front_text">
+                <span id="typing" class="animate"></span>
+                <span id="fading">Your Dream Car is clicks away</span>
+            </h1>
+        </div>
+    </div>
+</section>
+<div class="row">
+<aside class="sidebar">
+<div class="filters-div">
+    <h6 class="filter-title">CARS Filters</h6>
+    <div class="filters">
+        <div class="filter-lists">
+            <form action="#">
+                <div class="filter-item">
+                    <select>
+                    <option value="0">Select Year:</option>
+                    <option value="1">2021</option>
+                    <option value="2">2020</option>
+                    <option value="3">2019</option>
+                    <option value="4">2018</option>
+                    <option value="5">2017</option>
+                    <option value="6">2021</option>
+                    <option value="7">2021</option>
+                    <option value="8">2021</option>
+                    <option value="9">2021</option>
+                    <option value="10">2021</option>
+                    <option value="11">2021</option>
+                    <option value="12">2021</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <select>
+                        <option value="0">Condition:</option>
+                        <option value="1">New</option>
+                        <option value="2">Used</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <select>
+                        <option value="0">Manufacturer:</option>
+                        <option value="1">Ferrari</option>
+                        <option value="2">Lamborghini</option>
+                        <option value="3">Ford</option>
+                        <option value="4">Chevrolet</option>
+                        <option value="5">Volkswagen</option>
+                        <option value="6">Toyota</option>
+                    </select>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+</aside>
+    <div class="cars-table">
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="car-item">
+            <div class="car">
+                <div class="car-image-div">
+                    <picture class="car-img">
+                        <source type="image/webp" srcset="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg.webp">
+                        <img src="https://cardealer.potenzaglobalsolutions.com/wp-content/uploads/2018/07/359e94dff8_1024-265x190.jpg" alt="" width="265" height="190">
+                    </picture>
+                    <div class="car-banner">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-details">
+                        <ul class="list-inline">
+                            <li>
+                                2013
+                                <i class="fas fa-calendar-alt"></i>
+                            </li>
+                            <li>
+                                sedan
+                                <i class="fas fa-car"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-content">
+                    <a href="#">Toyota camry</a>
+                    <div class="car-price">
+                        <span>$19,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 1008px; width: 100%;"></div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>CarEvo company</h4>
+                <ul class="footer-list">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a target="_blank" href="https://www.najah.edu/en/home/">AN-NAJAH university</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our partners</h4>
+                <ul class="footer-list">
+                    <li><a href="#">Ford</a></li>
+                    <li><a href="#">Chevrolete</a></li>
+                    <li><a href="#">Toyota</a></li>
+                    <li><a href="#">Ferrari</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow us</h4>
+                <div class="social-footer">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="products.js"></script>
+</html>

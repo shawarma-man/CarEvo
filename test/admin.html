@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="admin.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Ford', 8],
+                ['Ferrari', 2],
+                ['Toyota', 2],
+                ['Chevrolet', 2],
+                ['Volkswagen', 2],
+                ['Skoda', 8]
+            ]);
+            let options = {'title':'Cars in inventory', 'width':368, 'height':400};
+
+            let chart = new google.visualization.PieChart(document.querySelector('.calendar'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo-details" style="background: black">
+        <img src="Carevo%20™.svg" height="140" width="140">
+
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a id="users-btn" href="#">
+                <i class='bx bxs-user' ></i>
+                <span class="links_name">Registered Users</span>
+            </a>
+        </li>
+        <li>
+            <a id="cars-btn" href="#">
+                <i class='bx bxs-car'></i>
+                <span class="links_name">Cars</span>
+            </a>
+        </li>
+        <li>
+            <a id="pending-btn" href="#">
+                <i class='bx bx-stopwatch'></i>
+                <span class="links_name">pending orders</span>
+            </a>
+        </li>
+        <li>
+            <a id="history-btn" href="#">
+                <i class='bx bx-book-alt' ></i>
+                <span class="links_name">Order History</span>
+            </a>
+        </li>
+
+
+        <li class="log_out">
+            <a href="exam.html">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Back Home</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Admin Dashboard</span>
+        </div>
+        <div class="profile-details">
+            <img src="test%20profile.jpg">
+            <span class="dashboard">Hello, Ahmed</span>
+        </div>
+    </nav>
+
+    <div class="Courses">
+
+        <div class="Noti">
+            <div class="data ">
+                <div id="order-title" class="title">Recent Orders</div>
+                <div class="da" id="recent">
+                    <table class="info-tables">
+                        <thead>
+                        <th>Order No.</th>
+                        <th>User ID</th>
+                        <th>Car ID</th>
+                        <th>Order Date</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="users" class="da" style="display: none">
+                    <table class="info-tables">
+                        <thead>
+                        <th>User ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="UserID">1</td>
+                            <td data-label="Username">shawarma</td>
+                            <td data-label="Email">kgll2009@hotmail.com</td>
+                            <td data-label="Password">123123</td>
+                        </tr>
+                        <tr>
+                            <td data-label="UserID">1</td>
+                            <td data-label="Username">shawarma</td>
+                            <td data-label="Email">kgll2009@hotmail.com</td>
+                            <td data-label="Password">123123</td>
+                        </tr>
+                        <tr>
+                            <td data-label="UserID">1</td>
+                            <td data-label="Username">shawarma</td>
+                            <td data-label="Email">kgll2009@hotmail.com</td>
+                            <td data-label="Password">123123</td>
+                        </tr>
+                        <tr>
+                            <td data-label="UserID">1</td>
+                            <td data-label="Username">shawarma</td>
+                            <td data-label="Email">kgll2009@hotmail.com</td>
+                            <td data-label="Password">123123</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+<!--------------------------------Cars schedule-------------------------------------->
+                <div id="cars" class="da" style="display: none">
+                    <table class="info-tables">
+                        <thead>
+                        <th>Car ID</th>
+                        <th>Manufacturer</th>
+                        <th>type</th>
+                        <th>model</th>
+                        <th>condition</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Car ID">1</td>
+                            <td data-label="Manufacturer">Ford</td>
+                            <td data-label="type">sedan</td>
+                            <td data-label="model">2021</td>
+                            <td data-label="condition">new</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="pending" class="da" style="display: none">
+                    <table class="info-tables">
+                        <thead>
+                        <th>User ID</th>
+                        <th>Car ID</th>
+                        <th>Order Date</th>
+                        <th>Response</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                            <td data-label="Response"><button class="response-button">Accept</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                            <td data-label="Response"><button class="response-button">Accept</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                            <td data-label="Response"><button class="response-button">Accept</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                            <td data-label="Response"><button class="response-button">Accept</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="history" class="da" style="display: none">
+                    <table class="info-tables">
+                        <thead>
+                        <th>Order No.</th>
+                        <th>User ID</th>
+                        <th>Car ID</th>
+                        <th>Order Date</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order No.">1</td>
+                            <td data-label="User ID">142213</td>
+                            <td data-label="Car ID">999</td>
+                            <td data-label="Order Date">9/12/2021</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="Grops">
+                <div class="title"> Statistics </div>
+                <div class="container">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">
+                                <h1></h1>
+                                <p></p>
+                            </div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</section>
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+            sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+            sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+</script>
+
+</body>
+</html>
+

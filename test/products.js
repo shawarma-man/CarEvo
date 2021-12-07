@@ -14,6 +14,27 @@ document.querySelector("#signup-form .close-btn").addEventListener("click", func
     document.querySelector("#signup-form").classList.remove("active");
 });
 
+document.querySelectorAll(".car-info-btn").forEach(el => el.addEventListener("click", function (){
+    document.querySelector("#buy-form").classList.add("active");
+}));
+
+document.querySelector("#buy-form .close-btn").addEventListener("click", function (){
+    document.querySelector("#buy-form").classList.remove("active");
+});
+
+$("#forgot").bind("click", function (){
+    $("#signin-form").removeClass("active");
+    $("#forgot-form").addClass("active");
+    $(".form h2").text("Password Reset");
+    $("#confirm").bind("click", function (){
+        $(".form h2").text("An email has been sent to you");
+        setTimeout(function() { $("#forgot-form").removeClass("active"); }, 3000)
+    })
+});
+$("#forgot-form .close-btn").bind("click", function (){
+    $("#forgot-form").removeClass("active");
+});
+
 document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -141,3 +162,6 @@ let delayInMilliseconds = 2000; //1 second
 setTimeout(function() {
     document.getElementById("fading").style.opacity='1';
 }, delayInMilliseconds);
+
+setTimeout(function() { document.body.classList.remove("intro") }, 3000);
+

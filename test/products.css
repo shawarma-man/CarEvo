@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --red: #e44e58;
+    --dark-red: #e43956c4;
+    --blue: #0077b5;
+    --gray: rgb(170, 170, 170);
+    --dark-gray: #181a1b;
+    --dark-blue: #002333;
+    --text-color: #fff;
+    --lighter-text: rgb(219, 219, 219);
+    --card-background: #2e3031;
+    --skills-span: rgb(200, 200, 200);
+}
 
+.light-mode {
+    --gray: rgb(107, 107, 107);
+    --dark-gray: white;
+    --text-color: #000;
+    --lighter-text: rgb(37, 37, 37);
+    --card-background: #eeeeee;
+    --skills-span: rgb(61, 61, 61);
+}
 *{
     box-sizing: border-box;
 }
@@ -23,6 +43,10 @@ body{
     background-size: cover;
     background-position: 0% 25%;
     transition: 3s;
+}
+.intro{
+    background: black;
+    z-index: 1000;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
@@ -94,6 +118,11 @@ h6 {
 }
 .filter-item select {
     display: none; /*hide original SELECT element: */
+}
+.search-item{
+    position: relative;
+    font-family: Roboto;
+    padding-top: 10px;
 }
 .select-selected {
     background-color: #db2d2e;
@@ -224,6 +253,11 @@ h6 {
     text-align: center;
     border-radius: 50%;
     text-decoration: none;
+    transition-duration: 0.5s;
+}
+.car .car-banner ul li a:hover{
+    background-color: #ffffff;
+    color: #db2d2e;
 }
 .car .car-details {
     background: #ffffff;
@@ -322,6 +356,7 @@ h6 {
 
 .header_link:hover{
     color: #db2d2e;
+    text-decoration: none;
 }
 .fixed-top{
     position: fixed;
@@ -605,6 +640,22 @@ li.dropdown {
     color: #db2d2e;
     background-color: #ffffff;
 }
+.search-bar{
+    padding-right: 55px;
+    padding-left: 12px;
+    color: #323232;
+    height: 45px;
+    border: 1px solid transparent;
+    background: #f4f4f4;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+.owl-stage-div{
+    height: 356px;
+    width: 100%;
+    opacity: 0.8;
+}
 ::selection {
     background: #db2d2e;
     color: #fff;
@@ -614,4 +665,105 @@ li.dropdown {
 #typing {
     color: #db2d2e;
     opacity: 1;
+}
+#search-car-submit{
+    background-color: #db2d2e;
+    color: #ffffff;
+    right: 0;
+    height: 45px;
+    border: 1px solid transparent;
+    position: absolute;
+    padding: 0 12px;
+    font-size: 14px;
+    cursor: pointer;
+    width: auto;
+    line-height: 42px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+#search-car-submit:hover{
+    background: #323232;
+}
+#owl-stage-section {
+    background: #f5f5f5;
+    padding: 5rem 0;
+}
+
+#owl-stage-section .header h2 {
+    font-size: 2.5rem;
+    position: relative;
+    color: var(--text-color);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: 80%;
+    margin: 0 auto 1rem auto;
+}
+
+#owl-stage-section .header h2 span {
+    color: var(--red);
+}
+
+#owl-stage-section .header h2::after {
+    content: "";
+    position: absolute;
+    margin-left: 1rem;
+    top: 50%;
+    width: 20%;
+    height: 3px;
+    background: var(--red);
+}
+
+#owl-stage-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#owl-stage-section .container div {
+    background: transparent;
+    height: 22rem;
+    width: 34rem;
+    padding: 1rem;
+    margin: 1.5rem;
+    text-align: center;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    border: 1px solid transparent;
+}
+
+#owl-stage-section .container div p {
+    font-size: 13px;
+
+    color: #999988;
+}
+
+#owl-stage-section .container div h3 {
+    font-size: 1.6rem;
+    color: black;
+    padding-bottom: 1rem;
+}
+
+#owl-stage-section .container div span {
+    font-size: 1rem;
+    color: var(--skills-span);
+    line-height: 2;
+}
+
+#owl-stage-section .container div span .iconify {
+    font-size: 4rem;
+    height: 70px;
+    width: 70px;
+}
+
+#owl-stage-section .container div:hover {
+    -webkit-transform: translateY(-3%);
+    transform: translateY(-3%);
+    -webkit-box-shadow: 0 5px var(--red);
+    box-shadow: 0 5px var(--red);
 }
